@@ -61,7 +61,7 @@ python mcnp_tally_plot_main.py
 
 <figure>
   <img
-  src="doc/mcnp_plotter/main_win_empty2.PNG"
+  src="doc/mcnp_plotter/main_win_empty2.png"
   width="75%"
   height="75%"
   alt="Main window without data">
@@ -84,7 +84,7 @@ python mcnp_tally_plot_main.py
 
 <figure>
   <img
-  src="doc/mcnp_plotter/main_win_data2.PNG"
+  src="doc/mcnp_plotter/main_win_data2.png"
   width="75%"
   height="75%"
   alt="Main window with data">
