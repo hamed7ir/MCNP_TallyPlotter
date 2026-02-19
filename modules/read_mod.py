@@ -245,15 +245,12 @@ def read_tally(f_path, fname):
                             raise ValueError(f"Unknown particle type '{tally_ptc}' for cutoff energy assignment.")
 
 
-                        # for tally F8 are the first two lines skipped:
-                        # first value is a non-analog knock-on e- negativ scores
-                        # epsilon bin (more details in manual)
+                        # for tally F8 the first line (zero-energy epsilon bin) is skipped;
+                        # the cutoff prepend logic below provides the correct lower bound (0)
                         if tally_type == 8:
-                            i = data_start + 2
+                            i = data_start + 1
                         else:
                             i = data_start
-
-                        i = data_start
 
                         line = content[i].split()
                         while line[0] != 'total':
@@ -294,11 +291,9 @@ def read_tally(f_path, fname):
                             surface_or_cell = control_next_tally_connection
 
 
-                            # for tally F8 are the first two lines skipped:
-                            # first value is a non-analog knock-on e- negative scores
-                            # epsilon bin (more details in manual)
+                            # for tally F8 the first line (zero-energy epsilon bin) is skipped
                             if tally_type == 8:
-                                next_tally += 2
+                                next_tally += 1
 
                             
                             line = content[next_tally].split()
