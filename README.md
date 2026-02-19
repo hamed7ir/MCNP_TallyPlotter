@@ -58,7 +58,9 @@ python mcnp_tally_plot_main.py
   - **Export tally to xlsx** - all selected tally are saved to `.xsls` file. User has to choose the `.xsls` file name in the saving dialog. All tally are saved into single sheet.
   - **(un)check all** - this function is activated by left mouse button by clicking on column name (un)check all. It checks or unchecks all tallies in the list.
   - **sort by column** - this function is activated by left mouse button by clicking on column name. It sorts all tallies by the selected column.
-
+ - **Export to separate xslx**: Previously, selecting tallies from multiple output files and clicking "Export tally to xlsx" merged everything           into a single Excel file.
+      A new "Export to separate xlsx" button has been added. It asks for an output directory, groups the selected tallies by their source output       file, and writes one .xlsx per output named after the original file (e.g. Anif5.xlsx). The original single-file export button is unchanged.
+   
 <figure>
   <img
   src="doc/mcnp_plotter/main_win_empty2.png"
